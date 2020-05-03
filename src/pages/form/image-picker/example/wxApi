@@ -1,0 +1,79 @@
+//微信分享
+import wx from 'weixin-js-sdk';
+import http from "../lib/http";
+
+// console.log('wx',wx)
+const WxApi = {
+	share: function () {
+		let wx_account = new Array(4);
+		http.get(" ")
+			.then((data) => {
+				// console.log('data-------------------------', data);
+				// @ts-ignore
+				wx_account[0] = data.data.wxuser;  // appid
+				// @ts-ignore
+				wx_account[1] = data.data.timestamp;   // timestamp
+				// @ts-ignore
+				wx_account[2] = data.data.noncestr; // noncestr
+				// @ts-ignore
+				wx_account[3] = data.data.signature;  // signature
+
+				//配置微信信息
+				wx.config({
+					debug: false,
+					appId: wx_account[0],
+					timestamp: wx_account[1],
+					nonceStr: wx_account[2],
+					signature: wx_account[3],
+					jsApiList: [
+						'hideMenuItems',
+						'chooseImage',
+						'previewImage',
+						'uploadImage',
+						'downloadImage',
+						'getLocalImgData'
+					]
+				});
+
+				wx.ready(function () {
+					WxApi.hideMenuItems();
+				});
+
+				wx.error(function () {
+					WxApi.hideMenuItems();
+				});
+
+			}).catch((ex) => {
+			console.error(ex);
+		});
+	},
+
+	hideMenuItems: function () {
+		wx.hideMenuItems({
+			menuList: [
+				'menuItem:copyUrl',
+				'menuItem:openWithSafari',
+				'menuItem:openWithQQBrowser',
+				'menuItem:originPage',
+				'menuItem:favorite',
+				'menuItem:share:appMessage',
+				'menuItem:share:timeline',
+				'menuItem:share:email',
+				'menuItem:share:qq',
+				'menuItem:share:QZone',
+				'menuItem:share:weiboApp',
+				'menuItem:share:facebook'
+			]
+		});
+	},
+
+	commonShare: function () {
+		WxApi.share();
+	},
+
+	close() {
+		wx.closeWindow();
+	}
+};
+
+export default WxApi;

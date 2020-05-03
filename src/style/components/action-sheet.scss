@@ -1,0 +1,87 @@
+@import '../mixins/index.scss';
+
+$zindex-action-sheet: 200;
+
+.at-action-sheet{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  z-index: $zindex-action-sheet;
+  &__overlay{
+    @include overlay;
+  }
+  &__container-center{
+    width: 514px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    overflow: hidden;
+    text-align: center;
+    &-item{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 32px;
+      color: #333333;
+      height: 92px;
+      background: #FFFFFF;
+      &:not(:first-child){
+        @include hairline-top;
+      }
+    }
+  }
+  &__container-bottom{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    left: 50%;
+    bottom: 42px;
+    transform: translate3d(-50%, 0, 0);
+    text-align: center;
+    font-size: 32px;
+    color: #333333;
+    &-item{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #FFFFFF;
+      // border-radius: 20px;
+      height: 88px;
+      &:last-child{
+        border-bottom-right-radius:20px;
+        border-bottom-left-radius:20px;
+      } 
+      &:first-child{
+        margin-top: 24px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      } 
+    }
+    &-normal-item{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #FFFFFF;
+      height: 88px;
+      &:first-child{
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      };
+      &:last-child{
+        border-bottom-right-radius:20px;
+        border-bottom-left-radius:20px;
+      }
+    }
+  }
+  &--active{
+    visibility: visible;
+  }
+}

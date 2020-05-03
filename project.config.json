@@ -1,0 +1,61 @@
+{
+	"miniprogramRoot": "dist/",
+	"projectname": "taro-x",
+	"description": "taro组件库",
+	"appid": "",
+	"setting": {
+		"urlCheck": true,
+		"es6": false,
+		"postcss": false,
+		"minified": false
+	},
+	"compileType": "miniprogram",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/form/image-picker/index",
+					"pathName": "pages/form/image-picker/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "弹层",
+					"pathName": "pages/layout/float-layout/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "日期组件",
+					"pathName": "pages/form/picker/index",
+					"scene": null
+				}
+			]
+		}
+	}
+}

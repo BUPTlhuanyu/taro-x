@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>基础组件icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="界面补充" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="风格2备份" transform="translate(-63.000000, -383.000000)">
+            <g id="基础组件" transform="translate(30.000000, 343.000000)">
+                <g id="基础组件icon" transform="translate(36.000000, 43.000000)">
+                    <circle id="椭圆形" stroke="#FDF6F6" stroke-width="5" cx="37" cy="37" r="37"></circle>
+                    <g id="icon" transform="translate(22.000000, 19.000000)" stroke-width="3">
+                        <polygon id="路径-3" stroke="#E1251B" points="15.3525094 0 31 9.00680862 31 27.0487852 15.3525094 35 0 27.0487852 0 9.00680862"></polygon>
+                        <path d="" id="路径-4" stroke="#E1251B"></path>
+                        <path d="M15.25,0 L15.25,35.2147449" id="直线" stroke="#E1251B" stroke-linecap="square"></path>
+                        <path d="M15.25,0 L15.25,18" id="直线" stroke="#003781" stroke-linecap="square"></path>
+                        <path d="M31,9.375 L1.7155281,26.625" id="直线-2" stroke="#E1251B" stroke-linecap="square"></path>
+                        <path d="M0,9.375 L31,26.625" id="直线-3" stroke="#E1251B" stroke-linecap="square"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

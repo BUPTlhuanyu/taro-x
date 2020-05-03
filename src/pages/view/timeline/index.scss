@@ -1,0 +1,58 @@
+.at-timeline-example {
+    .content-item {
+        font-family: PingFangSC-Regular;
+        font-size: 26px;
+        color: #333333;
+        letter-spacing: 0;
+        line-height: 36px;
+        .test1 {
+            color: #333333;
+        }
+        .test2 {
+            font-family: PingFangSC-Medium;
+            color: #546AAF;
+        }
+        .test3 {
+            margin-top: 20px;
+            color: #DBD8D8;
+        }
+        .test4 {
+            color: #999999;
+        }
+        .test11 {
+            font-family: PingFangSC-Semibold;
+            font-size: 26px;
+            color: #000000;
+            letter-spacing: 0;
+        }
+        .test22 {
+            font-family: PingFangSC-Regular;
+            font-size: 26px;
+            color: #000000;
+            letter-spacing: 0;
+        }
+        .test33 {
+            font-family: PingFangSC-Regular;
+            font-size: 26px;
+            color: #000000;
+            letter-spacing: 0;
+        }
+        .test44 {
+            font-family: PingFangSC-Regular;
+            font-size: 26px;
+            color: #999;
+            letter-spacing: 0;
+        }
+    }
+}
+.page {
+    .doc-body {
+      .panel__content {
+        padding: 0;
+      }
+  
+      .panel-fixed-top {
+        margin: auto -30px;
+      }
+    }
+  }

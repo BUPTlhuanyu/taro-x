@@ -1,0 +1,49 @@
+@import '../variables/default.scss';
+@import '../mixins/index.scss';
+
+
+
+
+.at-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: $at-divider-height;
+  font-size: $font-size-base;
+  text-align: center;
+
+  /* elements */
+  &__content {
+    display: inline-block;
+    position: relative;
+    padding: 0 30px;
+    color: $at-divider-content-color;
+    font-size: $at-divider-font-size;
+    background: $color-bg;
+    z-index: $zindex-divider + 1;
+  }
+
+  &__line {
+    border-top-width: 1PX ;
+    border-top-style: dashed;
+    border-top-color: $at-divider-line-color;
+    
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    z-index: $zindex-divider;
+    transform-origin: 50% 50%;
+
+    @media (min-resolution: 2dppx){
+      // border-top: none;
+      transform: scaleY(0.5);
+    }
+    @media (min-resolution: 3dppx) {
+      // border-top: none;
+      transform: scaleY(0.33);
+    }
+  }
+}

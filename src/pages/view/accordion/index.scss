@@ -1,0 +1,78 @@
+
+.example {
+    padding: 30px;
+}
+
+.at-accordion-item {
+    position: relative;
+    margin-bottom: 30px;
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-left {
+            display: flex;
+            align-items: center;
+        }
+        &--icon{
+            width: 92px;
+            height: 92px;
+            position: relative;
+            z-index: 9;
+        }
+        &--content {
+            font-family: PingFangSC-Semibold;
+            font-size: 28px;
+            color: #333333;
+            letter-spacing: 0.08px;
+            margin-left: 30px;
+        }
+        &-right {
+            position: relative;
+            z-index: 1;
+            width: 22px;
+            height: 13px;
+            transition: transform 0.2s ease;
+            &-roate {
+                transform: rotate(180deg) translateZ(0);
+            }
+        }
+    }
+    &__content {
+        padding-left: 122px;
+        font-family: PingFangSC-Regular;
+        font-size: 24px;
+        color: #666666;
+        letter-spacing: 0;
+        line-height: 34px;
+        position: relative;
+        overflow: hidden;
+        transition: height 0.2s linear;
+        &-1 {
+          height: 80px;
+        }
+        &-2 {
+          height: 350px;
+        }
+        &-3 {
+          height: 400px;
+        }
+        &-hide {
+            // visibility: hidden;
+            height: 0;
+        }
+    }
+    &__tail {
+        position: absolute;
+        top: 46px;
+        bottom: -46px;
+        left: 45px;
+        border-left: 3px solid #E2E6EA;
+    }
+    &:last-child {
+        .at-accordion-item__tail {
+            display: none;
+        }
+    }
+    
+}

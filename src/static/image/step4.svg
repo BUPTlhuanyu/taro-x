@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="92px" height="92px" viewBox="0 0 92 92" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>step4-理赔部审核</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#CED9E2" offset="0%"></stop>
+            <stop stop-color="#F7FAFB" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#E4E6EC" offset="0%"></stop>
+            <stop stop-color="#F7FAFB" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="24.2461004%" y1="25.6542487%" x2="78.7098539%" y2="80.3777021%" id="linearGradient-3">
+            <stop stop-color="#FB4941" offset="0%"></stop>
+            <stop stop-color="#FDA4A0" offset="100%"></stop>
+        </linearGradient>
+        <path d="M26.6867541,3.46566029 C31.2840887,3.7533305 34.9409617,7.49443064 34.9409617,12.0699697 L34.9409617,28.0331994 C34.9409617,32.7895729 30.9836982,36.6623292 26.1251546,36.6623292 L8.82005174,36.6623292 C3.95726343,36.6623292 0,32.7895729 0,28.0331994 L0,12.0699697 C0,7.49443064 3.65262832,3.7533305 8.25420753,3.46566029 C8.91593725,1.65263912 10.1522726,0 12.4771424,0 L22.4640369,0 C24.7844444,0 26.0207798,1.65263912 26.6867541,3.46566029 Z M13.3482804,2.93298634 C11.5231273,2.93298634 10.9234113,6.88167159 10.9190505,8.79895901 L25.4777845,8.79895901 C25.4734237,6.88600958 24.8778558,2.93298634 23.0527027,2.93298634 L13.3482804,2.93298634 Z" id="path-4"></path>
+        <filter x="-28.6%" y="-27.3%" width="157.2%" height="154.6%" filterUnits="objectBoundingBox" id="filter-5">
+            <feMorphology radius="8" operator="erode" in="SourceAlpha" result="shadowSpreadInner1"></feMorphology>
+            <feGaussianBlur stdDeviation="6" in="shadowSpreadInner1" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="0" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.798978591   0 0 0 0 0.961710989   0 0 0 0 0.138542295  0 0 0 0.190698596 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="11.298469%" y1="9.72055288%" x2="121.5279%" y2="141.971154%" id="linearGradient-6">
+            <stop stop-color="#546AAF" offset="0%"></stop>
+            <stop stop-color="#003387" offset="100%"></stop>
+        </linearGradient>
+        <ellipse id="path-7" cx="11.3285149" cy="11.9517323" rx="11.2375228" ry="11.3194941"></ellipse>
+        <filter x="-44.5%" y="-44.2%" width="189.0%" height="188.3%" filterUnits="objectBoundingBox" id="filter-8">
+            <feMorphology radius="8" operator="erode" in="SourceAlpha" result="shadowSpreadInner1"></feMorphology>
+            <feGaussianBlur stdDeviation="6" in="shadowSpreadInner1" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="0" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.798978591   0 0 0 0 0.961710989   0 0 0 0 0.138542295  0 0 0 0.190698596 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="C2-6-手风琴" transform="translate(-242.000000, -730.000000)">
+            <g id="编组" transform="translate(242.000000, 364.000000)">
+                <g id="step4-理赔部审核" transform="translate(0.000000, 366.000000)">
+                    <g id="圆圈背景-4" fill-rule="nonzero">
+                        <circle id="椭圆形" fill="url(#linearGradient-1)" opacity="0.314546131" cx="46" cy="46" r="46"></circle>
+                        <circle id="椭圆形" fill="url(#linearGradient-2)" cx="46" cy="46" r="38.6984127"></circle>
+                    </g>
+                    <g id="分组-2" transform="translate(24.301887, 25.169811)">
+                        <g id="合并形状">
+                            <use fill="url(#linearGradient-3)" fill-rule="evenodd" xlink:href="#path-4"></use>
+                            <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                        </g>
+                        <g id="分组-5" transform="translate(20.830189, 18.226415)">
+                            <g id="椭圆形">
+                                <use fill="url(#linearGradient-6)" fill-rule="evenodd" xlink:href="#path-7"></use>
+                                <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
+                            </g>
+                            <polygon id="路径" fill="#FFFFFF" points="17.9290809 8.64077091 10.7743964 17.0096076 5.41402921 12.7468321 6.93865219 10.7475524 10.5548378 13.6069523 15.8746982 7.03916141"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

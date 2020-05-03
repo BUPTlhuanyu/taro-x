@@ -1,0 +1,112 @@
+@import '../variables/default.scss';
+@import '../mixins/index.scss';
+
+$float-layout-timer: 270ms;
+
+.select-list {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  z-index: $zindex-flot-layout;
+  transition: visibility $float-layout-timer cubic-bezier(0.36, 0.66, 0.04, 1); //贝塞尔曲线值：先快后慢http://www.roblaplaca.com/examples/bezierBuilder/
+
+//   /* elements */
+  &__overlay {
+    @include overlay;
+    opacity: 1;
+    transition: opacity 170ms ease-in;
+  }
+
+  &__container {
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    // min-height: 400px;
+    // max-height: 892px;
+    background-color: #FFFFFF;
+    transform: translate3d(0, 100%, 0);
+    transition: transform $float-layout-timer cubic-bezier(0.36, 0.66, 0.04, 1);
+  }
+
+  .select-list {
+    &-header {
+      box-sizing: border-box;
+      position: relative;
+      padding: $spacing-v-md;
+    //   margin: 0 $spacing-h-md;
+      width: 100%;
+      height: 54PX;
+      background-color: #fff;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+      &__btn{
+        font-weight: bold;
+        font-family: PingFangSC-Regular;
+        font-size: 30px;
+        color: #000000;
+        line-height: 30px;
+        &-close{
+          font-family: PingFangSC-Regular;
+          font-size: 32px;
+          color: #FB4A41;
+          letter-spacing: 0;
+          text-align: right;
+          padding-right: $spacing-h-md;
+          line-height: 32px;
+        }
+        &-empty{
+            font-family: PingFangSC-Regular;
+            font-size: 32px;
+            color: #ffffff;
+            letter-spacing: 0;
+            text-align: left;
+            padding-left: $spacing-h-md;
+            line-height: 32px;
+        }
+      }
+    //   @include hairline-bottom(#E3E6EB);
+      border-bottom: 1PX solid #E3E6EB;
+    }
+
+    &-body {
+      width: 100%;
+      display: flex;
+      overflow-y: auto;
+    //   box-sizing: border-box;
+      font-size: $font-size-base;
+      background: #FFFFFF;
+      padding: $spacing-v-sm 0;
+
+      // padding: 25px 0;
+      // padding: $spacing-v-md;
+      max-height: 838px;
+      min-height: 446px;
+      //   height: 304PX; // 这里需要向外暴露，控制选择器body的高度
+      // &__content {
+      //   max-height: 798px;
+      //   min-height: 484px;
+      // }
+    }
+  }
+
+//   /* modifiers */
+  &--active {
+    visibility: visible;
+
+    .select-list__overlay {
+      opacity: 1;
+    }
+
+    .select-list__container {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}

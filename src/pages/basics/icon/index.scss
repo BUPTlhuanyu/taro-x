@@ -1,0 +1,27 @@
+.icon-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.icon-item{
+  margin-bottom: 40px;
+  flex: 1;
+  display: flex;
+  flex-basis: 33%;
+  flex-direction: column;
+  justify-content: center;
+  &__text{
+    text-align: center;
+  }
+  &__content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.custom-style{
+  font-size: 60px;
+  color: #f83e3a;
+}

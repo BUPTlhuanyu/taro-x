@@ -1,0 +1,217 @@
+/**
+ * 由于微信公众号图片上传的特殊性，
+ * 1. 安卓无法多选
+ * 2. 微信上传图片接口不支持并发处理，只能上传一个后再上传另外一个
+ * 3. 获取base64的接口不支持并发处理，只能上传一个后再上传另外一个
+ * 这里如果传入一个chooseFile那么就是走微信公众号的图片上传逻辑
+ */
+// 投保结算页面
+import Taro, { Component, Config } from '@tarojs/taro'
+import AtImagePicker from "../../../../components/image-picker/index"
+
+import WxApi from "./wxApi"
+import ToastUtils from './lib/toast';
+import http from './lib/http';
+import wx from 'weixin-js-sdk';
+import { isInIOS } from './promisify'
+
+
+function uploadImage(localIds, serverIds, postFn) {
+	if (localIds.length === 0) {
+			//图片全部上传完成
+			postFn(serverIds);
+	} else {
+			let localId = localIds.shift();
+			wx.uploadImage({
+					localId: localId, // 需要上传的图片的本地ID，由chooseImage接口获得
+					isShowProgressTips: 0, // 默认为1，显示进度提示
+					success: function (res) {
+							let serverId = res.serverId; // 返回图片的服务器端ID
+							serverIds.push(serverId);
+							uploadImage(localIds, serverIds, postFn);
+					}
+			});
+	}
+}
+
+/**
+ * 在ios无法展示图片的时候，需要将选择的图片专程base64
+ * @param localfiles 
+ * @param returnfiles 
+ * @param fn 
+ */
+function IOSbase64(localfiles, returnfiles, fn){
+  console.log('localfiles', localfiles)
+  if (localfiles.length === 0) {
+      //图片全部上传完成
+      console.log('returnfiles', returnfiles)
+      fn(returnfiles)
+  } else {
+      let localId = localfiles.shift();
+      wx.getLocalImgData({
+          localId: localId, // 需要上传的图片的本地ID，由chooseImage接口获得
+          success: function (res) {
+              let localData = res.localData;
+              let serverId = {url: localId, base64: localData}; // 返回图片的服务器端ID
+              returnfiles.push(serverId);
+              IOSbase64(localfiles, returnfiles, fn);
+          }
+      });
+  }
+}
+
+interface State {
+  applyImageInfo: any;
+}
+
+
+
+// 保全申请书/标的物清单
+let applyImageInfo = {
+	localIds: [],
+	serviceIds: []
+};
+
+class Index extends Component<{}, State> {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+      applyImageInfo: applyImageInfo,
+		}
+	}
+	config: Config = {
+		navigationBarTitleText: '微信公众号图片上传例子'
+	}
+
+	componentDidShow() {
+    WxApi.commonShare();
+	}
+
+	componentWillUnmount() {
+	}
+
+  /**
+   * 用于图片上传组件调用，选择成功之后，会调用props.onChange进行添加
+   */
+  chooseFile = (fn /* 图片组件会将props.onChange传入到props.chooseFile调用 */) => {
+    let that = this
+    wx.chooseImage({
+			count: 9, // 默认9
+			sizeType: ['compressed'], // 可以指定是原图还是压缩图，默认二者都有  'original',
+			sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+			success: function (res) {
+        let localIds = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
+        let len = localIds.length, localfiles: Array<any> = [];
+        for(let i=0; i<len; i++){
+          localfiles.push({url: localIds[i]})
+        }
+        fn('add', localfiles)
+
+        /* 如果ios无法展示本地链接的图片，需要用到下面注释的代码 */
+        // if(isInIOS){
+        //   let len = localIds.length, localfiles: Array<any> = [],returnfiles: Array<any>  = [];
+        //   for(let i=0; i<len; i++){
+        //     localfiles.push(localIds[i])
+        //   }
+        //   IOSbase64(localfiles, returnfiles, fn.bind(that, 'add'))
+        // }else{
+        //   let len = localIds.length, localfiles: Array<any> = [];
+        //   for(let i=0; i<len; i++){
+        //     localfiles.push({url: localIds[i]})
+        //   }
+        //   fn('add', localfiles)
+        // }
+      }, 
+      fail:function(err){
+        that.onFail(err)
+      }
+		});
+  }
+
+  onFail(err){
+    console.log('chooseImage失败的时候触发', err)
+  }
+
+	handleImgChange(type /* 上传图片的类型 */, operationType /* 'add' | 'remove'添加或删除图片 */,  files /* 选择添加的图片数组 */, index /* 需要删除的图片的位置 */) {
+    let info: string = type;
+    if (!info) { return }
+    if (operationType === 'add') {
+      let len = files.length, localIds: Array<any> = [], serverIds: Array<any> = []
+      for(let i=0; i<len; i++){
+      	localIds.push(files[i].url)
+      }
+      ToastUtils.loading('正在上传')
+      uploadImage(localIds, serverIds, this.uploadImg.bind(this, info, files))
+    } else {
+      // console.log(operationType, index)
+      // @ts-ignore
+      this.setState(prev => {
+        let files = prev[info].localIds.slice(),
+          serviceIds = prev[info].serviceIds.slice();
+        files.splice(index, 1)
+        serviceIds.splice(index, 1)
+        return {
+          [info]: {
+            serviceIds,
+            localIds: files
+          }
+        }
+      })
+    }
+	}
+
+	uploadImg(info, files: Array<any>, paraData){
+    let that = this
+    let data = paraData
+    // 接口需要的参数
+		const params = {
+      mediaIds: data,
+			type: 'APPLY'
+    };
+    
+		http.post(" ", params).then((res: any) => {
+      if (res.data.code === "0000") {
+        ToastUtils.shortWithoutMask("图片上传成功")
+        // @ts-ignore
+        that.setState(prev => {
+            let prevFiles = prev[info].localIds.slice(),
+              prevServiceIds = prev[info].serviceIds.slice();
+            return {
+              [info]: {
+                serviceIds: prevServiceIds.concat(res.data.data),
+                localIds: prevFiles.concat(files)
+              }
+            }
+          })
+      } else {
+        ToastUtils.shortWithoutMask(res.data.message? res.data.message : "图片上传失败");
+      }
+    })
+	}
+
+
+	render() {
+		const {
+      applyImageInfo
+		} = this.state;
+		return (
+      <AtImagePicker
+        files={applyImageInfo.localIds}
+        multiple={true}
+        count={9}
+        length={4}
+        onImageClick={()=> {}}
+        onFail={this.onFail}
+        onChange={this.handleImgChange.bind(this, 'applyImageInfo')}
+        chooseFile = {this.chooseFile}
+      />
+    );
+
+	}
+}
+
+
+
+export default Index;
+

@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AtDivider Snap render AtDivider -- props content(分割线) 1`] = `"<div style=\\"height:;\\" class=\\"at-divider\\"><div style=\\"color:;font-size:;\\" class=\\"at-divider__content\\">分割线</div><div style=\\"border-top-color:;border-top-style:solid;\\" class=\\"at-divider__line\\"></div></div>"`;

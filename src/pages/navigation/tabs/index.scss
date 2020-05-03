@@ -1,0 +1,93 @@
+.tab-content {
+  font-family: PingFangSC-Regular;
+  min-height: 300px;
+  font-size: 30px;
+  text-align: center;
+  background-color: #FAFBFC;
+}
+
+.tab-content--vertical {
+  height: 200PX;
+  padding: 100PX 50px;
+  font-size: 30px;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #FAFBFC;
+}
+
+.card-tabs-example {
+  background: #F4F6FB;
+  font-family: PingFangSC-Regular;
+  color: #333333;
+  font-size: 30px;
+}
+.card-tabs-titles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 30px 0;
+
+}
+.card-tabs-title-item {
+  width: 180px;
+  height: 140px;
+  background-color: #fff;
+  border-radius: 8px 8px 0px 0px;
+  font-size: 28px;
+  color: #666666;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  &--active {
+    background-image: linear-gradient(270deg, #FE9879 14%, #F5625C 85%);
+    color: #FFFFFF;
+    font-family: PingFangSC-Semibold;
+    transform-origin: center center;
+    &::after {
+      position: absolute;
+      z-index: 2;
+      content: '';
+      width: 0px;
+      height: 0px;
+      border: 20px solid #fb7775;
+      border-bottom: none;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 15px);
+    }
+  }
+}
+.card-tabs-content {
+    background-color: #fff;
+    border-top: 1Px solid #eee;
+    padding: 0 30px;
+   
+}
+.card-tabs-content-item {
+  padding: 30px;
+  height: 200px;
+  color: #000;
+  display: none;
+}
+
+.tab-content {
+    .content1, .content2, .content3 {
+        width: 90%;
+        height: 200px;
+        line-height: 200px;
+        margin: 0 auto;
+        background-color: #F5625C;
+    }
+    .content2 {
+        background-color: gold;
+    }
+    .content3 {
+        background-color: green;
+    }
+    
+}

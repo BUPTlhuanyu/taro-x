@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="92px" height="92px" viewBox="0 0 92 92" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>step5-收到赔款</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#CED9E2" offset="0%"></stop>
+            <stop stop-color="#F7FAFB" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#E4E6EC" offset="0%"></stop>
+            <stop stop-color="#F7FAFB" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="21.6460613%" y1="25.6542487%" x2="81.6083177%" y2="80.3777021%" id="linearGradient-3">
+            <stop stop-color="#FB4941" offset="0%"></stop>
+            <stop stop-color="#FDA4A0" offset="100%"></stop>
+        </linearGradient>
+        <path d="M18.2263308,0 C8.16027182,0 0,8.16021562 0,18.2262746 C0,28.2925584 8.16027182,36.4528302 18.2263308,36.4528302 C28.2925584,36.4528302 36.4528302,28.2925584 36.4528302,18.2262746 C36.4528302,13.3923899 34.5325414,8.75658208 31.1144229,5.33840733 C27.6962481,1.92028879 23.0602155,0 18.2263308,0 Z" id="path-4"></path>
+        <filter x="-27.4%" y="-27.4%" width="154.9%" height="154.9%" filterUnits="objectBoundingBox" id="filter-5">
+            <feMorphology radius="8" operator="erode" in="SourceAlpha" result="shadowSpreadInner1"></feMorphology>
+            <feGaussianBlur stdDeviation="6" in="shadowSpreadInner1" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="0" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.798978591   0 0 0 0 0.961710989   0 0 0 0 0.138542295  0 0 0 0.190698596 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="10.7317985%" y1="9.72055288%" x2="122.575216%" y2="141.971154%" id="linearGradient-6">
+            <stop stop-color="#546AAF" offset="0%"></stop>
+            <stop stop-color="#003387" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-7" cx="11.2830189" cy="11.2830189" r="11.2830189"></circle>
+        <filter x="-44.3%" y="-44.3%" width="188.6%" height="188.6%" filterUnits="objectBoundingBox" id="filter-8">
+            <feMorphology radius="8" operator="erode" in="SourceAlpha" result="shadowSpreadInner1"></feMorphology>
+            <feGaussianBlur stdDeviation="6" in="shadowSpreadInner1" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="0" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.798978591   0 0 0 0 0.961710989   0 0 0 0 0.138542295  0 0 0 0.190698596 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="C2-6-手风琴" transform="translate(-242.000000, -852.000000)">
+            <g id="编组" transform="translate(242.000000, 364.000000)">
+                <g id="step5-收到赔款" transform="translate(0.000000, 488.000000)">
+                    <g id="圆圈背景-4-copy" fill-rule="nonzero">
+                        <circle id="椭圆形" fill="url(#linearGradient-1)" opacity="0.314546131" cx="46" cy="46" r="46"></circle>
+                        <circle id="椭圆形" fill="url(#linearGradient-2)" cx="46" cy="46" r="38.6984127"></circle>
+                    </g>
+                    <g id="分组-6" transform="translate(25.169811, 26.037736)">
+                        <g id="路径">
+                            <use fill="url(#linearGradient-3)" fill-rule="evenodd" xlink:href="#path-4"></use>
+                            <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                        </g>
+                        <path d="M24.2342122,21.5149427 C25.2302377,21.5149427 26.0377358,22.3411033 26.0377358,23.3605565 C26.0377358,24.3799527 25.2302377,25.2061133 24.2342122,25.2061133 L20.0295495,25.2061133 L20.0295495,27.6638202 C20.0295495,28.6832164 19.2223294,29.509434 18.2263039,29.509434 C17.2304451,29.509434 16.4230026,28.6832164 16.4230026,27.6638202 L16.4230026,25.2061133 L12.21834,25.2061133 C11.2223144,25.2061133 10.4150943,24.3799527 10.4150943,23.3605565 C10.4150943,22.3411033 11.2223144,21.5149427 12.21834,21.5149427 L16.4230026,21.5149427 L16.4230026,18.4355806 L12.21834,18.4355806 C11.2223144,18.4355806 10.4150943,17.6091923 10.4150943,16.5899668 C10.4150943,15.5705706 11.2223144,14.7441823 12.21834,14.7441823 L15.6446456,14.7441823 L10.96555,9.95529663 C10.4072529,9.22361943 10.4667586,8.18151301 11.1043596,7.52138138 C11.742183,6.86130665 12.7597307,6.78879349 13.4807509,7.35199426 L18.2263039,12.2088966 L22.8580174,7.46850482 C23.5421107,6.76836003 24.6513083,6.76836003 25.3354016,7.46850482 C26.0194392,8.16859269 26.0194392,9.30364573 25.3354016,10.0037905 L20.6749918,14.7732672 L24.2153038,14.7732672 C25.2113294,14.7732672 26.018605,15.5997124 26.018605,16.6191087 C26.018605,17.6382772 25.2113294,18.4647224 24.2153038,18.4647224 L20.0295495,18.4647224 L20.0295495,21.5149427 L24.2342122,21.5149427 Z" id="路径" fill="#FFFFFF"></path>
+                        <g id="分组-4" transform="translate(19.962264, 18.226415)">
+                            <g id="椭圆形">
+                                <use fill="url(#linearGradient-6)" fill-rule="evenodd" xlink:href="#path-7"></use>
+                                <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
+                            </g>
+                            <polygon id="路径" fill="#FFFFFF" points="18.2677448 8.00097266 10.8959184 16.1185984 5.37286613 11.9837804 6.94376082 10.044514 10.6696963 12.818082 16.1510124 6.44743935"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

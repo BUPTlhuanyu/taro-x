@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="24px" viewBox="0 0 25 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>完成icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="C5-01统计数值备份" transform="translate(-401.000000, -787.000000)">
+            <g id="分组" transform="translate(214.000000, 732.000000)">
+                <g id="Group" transform="translate(20.500000, 20.000000)">
+                    <g id="Group-2" transform="translate(161.000000, 36.000000)">
+                        <g id="完成icon" transform="translate(7.000000, 0.000000)">
+                            <circle id="Oval-7" stroke="#FFFFFF" stroke-width="2" fill="#82BD7C" cx="11" cy="11" r="11"></circle>
+                            <path d="M11.7244747,12.875676 L11.7410309,6.12031714 C11.7428794,5.36608024 12.3435103,4.74970697 13.097447,4.7283497 C13.8190781,4.70790759 14.4206473,5.27633357 14.4410895,5.99796467 C14.4415206,6.01318284 14.4416858,6.02840738 14.441585,6.04363131 L14.3917693,13.5688806 C14.3845586,14.6581373 13.5069904,15.5413179 12.4178018,15.5554724 L9.35836404,15.5952312 C8.56328126,15.6055637 7.90656015,14.9768898 7.88220196,14.1821131 C7.85944559,13.4396015 8.44292244,12.8192293 9.18543399,12.7964729 C9.21361045,12.7956094 9.24180709,12.7956318 9.26998213,12.7965402 L11.7244747,12.875676 Z" id="Combined-Shape" fill="#FFFFFF" transform="translate(11.161586, 10.161586) rotate(-315.000000) translate(-11.161586, -10.161586) "></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

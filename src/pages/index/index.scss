@@ -1,0 +1,81 @@
+.modal-content{
+    font-family: PingFangSC-Regular;
+    font-size: 28px;
+    color: #333333;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: 46px;
+}
+
+.index-container{
+    background-color: #F5F8FC;
+    font-size: 0;
+    .bg{
+        width: 100%;
+    }
+    .content-wraper{
+        margin-top: -447px;        
+        width: 100%;
+        .content-title{
+            position: relative;
+            font-family: PingFangSC-Light;
+            font-size: 50px;
+            color: #FFFFFF;
+            letter-spacing: 0;
+            height: 70px;
+            margin: 26px 0 70px;
+            text-align: center;
+        }
+        .logo{
+            position: relative;
+            left: 50%;
+            transform: translate3d(-50%, 0, 0);
+        }
+        // content加到组件上或者其父组件上
+        .content{
+            width: 100%;
+            background-color: rgba(245,248,252,0);
+            // position: absolute;
+            // top: 173px;
+            // left: 32px;
+            // margin-top: -127px;
+            padding-bottom: 100px;
+            // 覆盖原有的title
+            .item-content__info-title{
+                font-family: PingFangSC-Medium;
+                font-size: 32px;
+                color: #2E2D2D;
+                letter-spacing: 0;   
+                font-weight: bolder;          
+            }
+            // 覆盖原有的note
+            .item-content__info-note{
+                font-family: PingFangSC-Regular;
+                font-size: 26px;
+                color: #848484;
+                letter-spacing: 0;
+            }
+            // 为每一个item都加上一些公共的属性
+            .at-list__item{
+                height: 158px;
+                background: #FFFFFF;
+                box-shadow: 0 8px 20px 0 rgba(0,34,89,0.06);
+                border-radius: 6px;
+                margin: 30px 30px;
+            }
+            // 为每一个item都加上一些公共的属性之后，由于第一个item不需要margin-top
+            // 但是小程序不支持伪类，因此给第一个item加上一个class是为了增加他的优先级
+            // 然后将第一个item的at-list__item类的样式覆盖掉。
+            .without-margin-top.at-list__item{
+                margin-top: 0,
+            }
+            // 覆盖图片容器的宽高 
+            .at-list__item-thumb{
+                width: 102px;
+                height: 102px 
+            }
+        }
+    }
+
+
+}

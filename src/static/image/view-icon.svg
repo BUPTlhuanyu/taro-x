@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56.3 (81716) - https://sketch.com -->
+    <title>数据展示组件icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="界面补充" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="风格2备份" transform="translate(-63.000000, -572.000000)">
+            <g id="数据展示组件" transform="translate(30.000000, 532.000000)">
+                <g id="数据展示组件icon" transform="translate(36.000000, 43.000000)">
+                    <circle id="椭圆形" stroke="#FDF6F6" stroke-width="5" cx="37" cy="37" r="37"></circle>
+                    <g id="icon" transform="translate(37.500000, 37.000000) scale(1, -1) translate(-37.500000, -37.000000) translate(19.000000, 25.000000)" stroke-width="3">
+                        <path d="M18.5000732,24 C11.0259189,24 4.07006065,20.0240799 0.444135216,13.5903553 C-0.148045072,12.5782359 -0.148045072,11.4217005 0.444135216,10.4096447 C4.07006065,3.97592007 11.0259189,0 18.5000732,0 C25.9739673,0 32.9300857,3.97592007 36.5560111,10.4096447 C37.1479963,11.4217005 37.1479963,12.5782359 36.5560111,13.5903553 C32.9300857,20.0240799 25.9739673,24 18.5000732,24 Z" id="路径" stroke="#E1251B"></path>
+                        <path d="M18.499966,15.5 C20.6689426,15.5 22.4429148,13.7087288 22.5,11.5 C22.5,9.30726305 20.6926556,7.5 18.499966,7.5 C16.3071279,7.5 14.5,9.3071391 14.5,11.5 C14.5,13.6928609 16.3071279,15.5 18.499966,15.5 Z" id="路径" stroke="#003781"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

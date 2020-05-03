@@ -1,0 +1,291 @@
+@import '../variables/default.scss';
+@import '../mixins/index.scss';
+
+$title-font-default:26px; // 默认的字体大小
+$title-font-active:30px; // 高亮的字体大小
+$title-color-default:#000; // 默认的字体颜色
+$title-color-active:#FB4A41; // 高高亮的字体颜色
+$title-color-disabled:#E3E6EB; // 禁用的字体颜色
+$icon-color-active:#546AAF; //带图标高亮颜色
+$title-font-small:20px; // 带icon的小标题文字大小
+$title-font-family-default: PingFangSC-Regular; // 默认文字类型
+$title-font-family-bold: PingFangSC-Semibold; // 加粗文字类型
+
+$lenth:4;
+
+.at-steps {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-family: $title-font-family-default;
+  line-height: 2;
+
+  /* elements */
+  &__circular {
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 52px;
+    height: 52px;
+    line-height: 52px;
+    text-align: center;
+    border: 3px solid $title-color-disabled;
+    font-size: $title-font-active;
+    font-family: $title-font-family-bold;
+    color: $title-color-disabled;
+    border-radius: 50%;
+    transition: all 0.1s;
+  }
+
+  &__circular__title {
+    font-size: $title-font-small;
+    color: $title-color-disabled;
+    font-family: $title-font-family-bold;
+    margin-top: 14px;
+  }
+
+  &__item {
+    position: relative;
+    flex: 1;
+    text-align: center;
+
+    &--actived {
+      .at-steps__primary {
+        font-size: $title-font-default;
+        color: $title-color-default;
+        font-family: $title-font-family-bold;
+      }
+
+      // .at-steps__circular__title {
+      //   color: #333333;
+      //   font-weight: 100;
+      // }
+
+      .at-steps__circular {
+        border: none;
+        background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNTRweCIgaGVpZ2h0PSI1NHB4IiB2aWV3Qm94PSIwIDAgNTQgNTQiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDU2LjMgKDgxNzE2KSAtIGh0dHBzOi8vc2tldGNoLmNvbSAtLT4KICAgIDx0aXRsZT7nvJbnu4Q8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iQzUtMDHnu5/orqHmlbDlgLzlpIfku70iIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMTExLjAwMDAwMCwgLTc2OC4wMDAwMDApIj4KICAgICAgICAgICAgPGcgaWQ9IuWIhue7hC0yIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMDM0LjAwMDAwMCwgNzMyLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPGcgaWQ9IuWIhue7hC00IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMC4wMDAwMDAsIDIwLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgIDxnIGlkPSLmraXpqqQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQ0LjAwMDAwMCwgMTYuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxnIGlkPSLnvJbnu4QiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEzLjAwMDAwMCwgMC4wMDAwMDApIj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxjaXJjbGUgaWQ9Ik92YWwxIiBzdHJva2U9IiM1NDZBQUYiIHN0cm9rZS13aWR0aD0iMyIgZmlsbD0iI0ZGRkZGRiIgY3g9IjI3IiBjeT0iMjciIHI9IjI1LjUiPjwvY2lyY2xlPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPHBvbHlnb24gaWQ9IuWbvuaghy3lr7nlj7ct6JOd6ImyIiBmaWxsPSIjNTQ2QUFGIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNy4wMDAwMDAsIDI2LjY2NjY2Nykgcm90YXRlKC0zMTUuMDAwMDAwKSB0cmFuc2xhdGUoLTI3LjAwMDAwMCwgLTI2LjY2NjY2NykgIiBwb2ludHM9IjI5LjY5Mjk2MjMgMzIuMDI2Mjk1NyAyOS42NzIyOTYgMTguMTIwOTYzNiAzMyAxOCAzMyAzNS4zMzMzMzMzIDIxIDM1LjMzMzMzMzMgMjEuMTY1OTUzMyAzMS45NjQ0NDMzIj48L3BvbHlnb24+CiAgICAgICAgICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgIDwvZz4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg==') no-repeat;
+        background-size: cover;
+      }
+
+      .at-steps__icon {
+        display: block;
+      }
+
+      .at-steps__circular__left-line {
+        background-color: $icon-color-active;
+      }
+
+      .at-steps__circular__right-line {
+        background-color: $icon-color-active;
+      }
+    }
+
+    &--active {
+      .at-steps__primary {
+        font-size: $title-font-active;
+        color: $title-color-active;
+        font-family: $title-font-family-bold;
+      }
+
+      .at-steps__circular {
+        box-sizing: border-box;
+        border: 3px solid transparent;
+        background: #546AAF;
+        font-size: $title-font-active;
+        font-family: $title-font-family-bold;
+        color: #FFFFFF;
+      }
+      .at-steps__circular__left-line {
+        background-color: $icon-color-active;
+      }
+
+      .at-steps__circular__right-line {
+        background-color: $icon-color-active;
+      }
+      .at-steps__circular__title {
+        color: #000;
+      }
+    }
+
+    &--inactive {
+      .at-steps__primary {
+        font-size: $title-font-default;
+        color: $title-color-disabled;
+      }
+
+      .at-steps__circular {
+        box-sizing: border-box;
+        border: 3px solid $title-color-disabled;
+        font-size: $title-font-active;
+        font-family: $title-font-family-bold;
+        color: $title-color-disabled;
+      }
+    }
+  }
+
+  &__circular-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0;
+  }
+
+  &__primary-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0;
+  }
+
+  // &__single-icon {
+  //   font-size: $at-steps-circle-size;
+
+  //   &--success {
+  //     color: #546AAF;
+  //   }
+
+  //   &--error {
+  //     color: $color-error;
+  //   }
+  // }
+
+  // &__circle-icon {
+  //   font-size: $at-steps-icon-size;
+  // }
+
+  &__left-line {
+    position: absolute;
+    width: 15%;
+    top: 50%;
+    left: 0;
+    height: 1Px;
+    background-color: $title-color-disabled;
+
+
+    &--2 {
+      //50px -- 间隔  20px是字体宽度 //TODO 这里不可以用$title-font-default变量
+      width: calc((100% - 50px * 2 - 26px * 2)/2);
+
+      &--active {
+        width: calc((100% - 50px * 2 - 30px * 2)/2); //当前选项高亮时，间距还应该不变，则左划线应该变短
+      }
+    }
+
+    &--3 {
+      width: calc((100% - 34px * 2 - 26px * 3)/2);
+
+      &--active {
+        width: calc((100% - 34px * 2 - 30px * 3)/2);
+      }
+    }
+
+    &--4 {
+      width: calc((100% - 20px * 2 - 26px * 4)/2);
+
+      &--active {
+        width: calc((100% - 20px * 2 - 30px * 4)/2);
+      }
+    }
+
+    &--5 {
+      width: calc((100% - 10px * 2 - 26px * 5)/2);
+
+      &--active {
+        width: calc((100% - 10px * 2 - 30px * 5)/2);
+      }
+    }
+
+  }
+
+  &__right-line {
+    position: absolute;
+    width: 15%;
+    top: 50%;
+    right: 0;
+    height: 1Px;
+    background-color: $title-color-disabled;
+
+    &--2 {
+      width: calc((100% - 50px * 2 - 26px * 2)/2); //50px -- 间隔  20px是字体宽度
+
+      &--active {
+        width: calc((100% - 50px * 2 - 30px * 2)/2);
+      }
+    }
+
+    &--3 {
+      width: calc((100% - 34px * 2 - 26px * 3)/2);
+
+      &--active {
+        width: calc((100% - 34px * 2 - 30px * 3)/2);
+      }
+    }
+
+    &--4 {
+      width: calc((100% - 20px * 2 - 26px * 4)/2);
+
+      &--active {
+        width: calc((100% - 20px * 2 - 30px * 4)/2);
+      }
+    }
+
+    &--5 {
+      width: calc((100% - 10px * 2 - 26px * 5)/2);
+
+      &--active {
+        width: calc((100% - 10px * 2 - 30px * 5)/2);
+      }
+    }
+
+  }
+
+  &__circular__left-line {
+    position: absolute;
+    width: calc((100% - 52px)/2);
+    top: 50%;
+    left: 0;
+    height: 2px;
+    background-color: $title-color-disabled;
+  }
+
+  &__circular__right-line {
+    position: absolute;
+    width: calc((100% - 52px)/2);
+    top: 50%;
+    right: 0;
+    height: 2px;
+    background-color: $title-color-disabled;
+  }
+
+  &__icon {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjVweCIgaGVpZ2h0PSIyNHB4IiB2aWV3Qm94PSIwIDAgMjUgMjQiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDU2LjMgKDgxNzE2KSAtIGh0dHBzOi8vc2tldGNoLmNvbSAtLT4KICAgIDx0aXRsZT7lrozmiJBpY29uPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9IkM1LTAx57uf6K6h5pWw5YC85aSH5Lu9IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNDAxLjAwMDAwMCwgLTc4Ny4wMDAwMDApIj4KICAgICAgICAgICAgPGcgaWQ9IuWIhue7hCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjE0LjAwMDAwMCwgNzMyLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPGcgaWQ9Ikdyb3VwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMC41MDAwMDAsIDIwLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgIDxnIGlkPSJHcm91cC0yIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNjEuMDAwMDAwLCAzNi4wMDAwMDApIj4KICAgICAgICAgICAgICAgICAgICAgICAgPGcgaWQ9IuWujOaIkGljb24iIHRyYW5zZm9ybT0idHJhbnNsYXRlKDcuMDAwMDAwLCAwLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgICAgICAgICAgICAgPGNpcmNsZSBpZD0iT3ZhbC03IiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0iIzgyQkQ3QyIgY3g9IjExIiBjeT0iMTEiIHI9IjExIj48L2NpcmNsZT4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0xMS43MjQ0NzQ3LDEyLjg3NTY3NiBMMTEuNzQxMDMwOSw2LjEyMDMxNzE0IEMxMS43NDI4Nzk0LDUuMzY2MDgwMjQgMTIuMzQzNTEwMyw0Ljc0OTcwNjk3IDEzLjA5NzQ0Nyw0LjcyODM0OTcgQzEzLjgxOTA3ODEsNC43MDc5MDc1OSAxNC40MjA2NDczLDUuMjc2MzMzNTcgMTQuNDQxMDg5NSw1Ljk5Nzk2NDY3IEMxNC40NDE1MjA2LDYuMDEzMTgyODQgMTQuNDQxNjg1OCw2LjAyODQwNzM4IDE0LjQ0MTU4NSw2LjA0MzYzMTMxIEwxNC4zOTE3NjkzLDEzLjU2ODg4MDYgQzE0LjM4NDU1ODYsMTQuNjU4MTM3MyAxMy41MDY5OTA0LDE1LjU0MTMxNzkgMTIuNDE3ODAxOCwxNS41NTU0NzI0IEw5LjM1ODM2NDA0LDE1LjU5NTIzMTIgQzguNTYzMjgxMjYsMTUuNjA1NTYzNyA3LjkwNjU2MDE1LDE0Ljk3Njg4OTggNy44ODIyMDE5NiwxNC4xODIxMTMxIEM3Ljg1OTQ0NTU5LDEzLjQzOTYwMTUgOC40NDI5MjI0NCwxMi44MTkyMjkzIDkuMTg1NDMzOTksMTIuNzk2NDcyOSBDOS4yMTM2MTA0NSwxMi43OTU2MDk0IDkuMjQxODA3MDksMTIuNzk1NjMxOCA5LjI2OTk4MjEzLDEyLjc5NjU0MDIgTDExLjcyNDQ3NDcsMTIuODc1Njc2IFoiIGlkPSJDb21iaW5lZC1TaGFwZSIgZmlsbD0iI0ZGRkZGRiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTEuMTYxNTg2LCAxMC4xNjE1ODYpIHJvdGF0ZSgtMzE1LjAwMDAwMCkgdHJhbnNsYXRlKC0xMS4xNjE1ODYsIC0xMC4xNjE1ODYpICI+PC9wYXRoPgogICAgICAgICAgICAgICAgICAgICAgICA8L2c+CiAgICAgICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICAgICAgPC9nPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=') no-repeat;
+    background-size: cover;
+    top: 50%;
+    left: 100%;
+    margin-left: -11px;
+    margin-top: -11px;
+    // transform: translate(50%, -50%);
+    z-index: 9;
+    display: none;
+  }
+
+  &__num {
+    font-size: 30px;
+    font-family: $title-font-family-bold;
+    line-height: 52px;
+  }
+
+  &__desc {
+    color: $at-steps-desc-color;
+    font-size: $at-steps-desc-size;
+    @include line(2);
+  }
+}
