@@ -84,11 +84,11 @@ import 'taro-ui/dist/style/components/button.scss'
 ## 包体体积
 在app.js之后全量引入css
 
-https://github.com/BUPTlhuanyu/taro-x/blob/develop/blog/assets/1.png
+https://github.com/BUPTlhuanyu/taro-x/blob/master/blog/assets/1.png
 
 按需加载
 
-https://github.com/BUPTlhuanyu/taro-x/blob/develop/blog/assets/2.png
+https://github.com/BUPTlhuanyu/taro-x/blob/master/blog/assets/2.png
 
 ## 原理请参考
 - [babel-plugin-import](https://github.com/ant-design/babel-plugin-import)

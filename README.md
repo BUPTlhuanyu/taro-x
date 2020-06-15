@@ -1,10 +1,3 @@
-<!--
- * @Descripttion: 
- * @Author: lhuanyu
- * @Date: 2019-10-26 11:22:29
- * @LastEditors: lhuanyu
- * @LastEditTime: 2020-04-07 17:16:43
- -->
 基于taro的公共组件库
 
 ## 👽参考：
@@ -27,7 +20,7 @@ const config = {
   }
 }
 ```
-- #### [按需加载使用方式](https://github.com/BUPTlhuanyu/taro-x/blob/develop/blog/HowToImportOnDemand.md)(推荐)
+- #### [按需加载使用方式](https://github.com/BUPTlhuanyu/taro-x/blob/master/blog/HowToImportOnDemand.md)(推荐)
 - #### 非按需加载
   **引入组件样式的三种方式**
 
@@ -47,13 +40,13 @@ const config = {
   ```
 
 
-## 👽[组件开发流程](https://github.com/BUPTlhuanyu/taro-x/blob/develop/blog/HowToCreateComponent.md)
+## 👽[组件开发流程](https://github.com/BUPTlhuanyu/taro-x/blob/master/blog/HowToCreateComponent.md)
 
-## 👽[typescript申明文件开发流程与规范](https://github.com/BUPTlhuanyu/taro-x/blob/develop/blog/HowToCreateTsForYourComponent.md)
+## 👽[typescript申明文件开发流程与规范](https://github.com/BUPTlhuanyu/taro-x/blob/master/blog/HowToCreateTsForYourComponent.md)
 
-## 👽[H5组件单元测试](https://github.com/BUPTlhuanyu/taro-x/blob/develop/blog/HowToTestWithJest.md)
+## 👽[H5组件单元测试](https://github.com/BUPTlhuanyu/taro-x/blob/master/blog/HowToTestWithJest.md)
 
-## 👽[组件发布流程](https://github.com/BUPTlhuanyu/taro-x/blob/develop/blog/HowToPublish.md)
+## 👽[组件发布流程](https://github.com/BUPTlhuanyu/taro-x/blob/master/blog/HowToPublish.md)
 
 
 ## 👽组件文档
@@ -76,7 +69,7 @@ TODO: 规范组件写法，利用react-docgen或借鉴react-docgen自动生成�
     <View className={rootClass}></View>
 ```
 
-## 👽[组件开发流程调研](https://github.com/BUPTlhuanyu/taro-x/blob/develop/blog/ResearchForHowToAddAComponent.md)
+## 👽[组件开发流程调研](https://github.com/BUPTlhuanyu/taro-x/blob/master/blog/ResearchForHowToAddAComponent.md)
 
 
 
